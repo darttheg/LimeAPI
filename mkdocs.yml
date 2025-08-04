@@ -20,7 +20,7 @@ theme:
 nav:
   - Home: index.md
   - News: news.md
-  - Manual:
+  - API:
     - Runtime: ./manual/runtime.md
     - Modules:
       - Lime: lime.md
@@ -60,3 +60,8 @@ nav:
 
 repo_url: https://github.com/darttheg/Lime
 repo_name: Lime
+
+extra:
+  alternate_404: true
+
+use_directory_urls: false
