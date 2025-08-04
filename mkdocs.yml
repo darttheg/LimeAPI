@@ -17,44 +17,56 @@ theme:
   features:
     - search.suggest
 
+markdown_extensions:
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
 nav:
   - Home: index.md
   - News: news.md
   - API:
-    - Runtime: ./manual/runtime.md
+    - Runtime: ./api/runtime.md
     - Modules:
       - Lime: lime.md
-      - World: world.md
-      - GUI: gui.md
       - Input: input.md
+      - GUI: gui.md
+      - World: world.md
       - Sound: sound.md
-      - Networking:
+      - Network:
         - NetworkClient: networkclient.md
         - NetworkServer: networkserver.md
     - Classes:
       - 2D:
-        - Image2D: image2d.md
-        - Text2D: text2d.md
-        - EditBox: editbox.md
+        - Image2D: ./api/classes/2d/image2d.md
+        - Text2D: ./api/classes/2d/text2d.md
+        - EditBox: ./api/classes/2d/editbox.md
       - 3D:
-        - Camera: camera.md
-        - Mesh: mesh.md
-        - MeshBuffer: meshbuffer.md
-        - Material: material.md
-        - Empty: empty.md
-        - Hitbox: hitbox.md
-        - Billboard: billboard.md
-        - Text3D: text3d.md
-        - Water: water.md
-        - Light: light.md
-        - LegacyLight: legacylight.md
-        - ParticleSystem: particlesystem.md
-        - Trail: trail.md
-      - Vector2D: vector2d.md
-      - Vector3D: vector3d.md
-      - Vector4D: vector4d.md
-      - Texture: texture.md
-      - Packet: packet.md
+        - Physics:
+          - Coming Soon: 404.md
+        - Camera: ./api/classes/3d/camera.md
+        - Mesh: ./api/classes/3d/mesh.md
+        - MeshBuffer: ./api/classes/3d/meshbuffer.md
+        - Material: ./api/classes/3d/material.md
+        - Empty: ./api/classes/3d/empty.md
+        - Hitbox: ./api/classes/3d/hitbox.md
+        - Billboard: ./api/classes/3d/billboard.md
+        - Text3D: ./api/classes/3d/text3d.md
+        - Water: ./api/classes/3d/water.md
+        - Light: ./api/classes/3d/light.md
+        - LegacyLight: ./api/classes/3d/legacylight.md
+        - ParticleSystem: ./api/classes/3d/particlesystem.md
+        - Trail: ./api/classes/3d/trail.md
+      - Vector2D: ./api/classes/vector2d.md
+      - Vector3D: ./api/classes/vector3d.md
+      - Vector4D: ./api/classes/vector4d.md
+      - Texture: ./api/classes/texture.md
+      - Packet: ./api/classes/packet.md
+    - Structs: ./api/structs.md
   - Examples:
     - 01 Hello World: example-01.md
 
