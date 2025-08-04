@@ -1,0 +1,62 @@
+site_name: Lime API
+
+plugins:
+  - search
+
+theme:
+  highlightjs: true
+  name: material
+  font:
+    code: Noto Sans
+  palette:
+    scheme: slate
+    primary: light green
+    accent: lime
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - search.suggest
+
+nav:
+  - Home: index.md
+  - News: news.md
+  - Manual:
+    - Runtime: ./manual/runtime.md
+    - Modules:
+      - Lime: lime.md
+      - World: world.md
+      - GUI: gui.md
+      - Input: input.md
+      - Sound: sound.md
+      - Networking:
+        - NetworkClient: networkclient.md
+        - NetworkServer: networkserver.md
+    - Classes:
+      - 2D:
+        - Image2D: image2d.md
+        - Text2D: text2d.md
+        - EditBox: editbox.md
+      - 3D:
+        - Camera: camera.md
+        - Mesh: mesh.md
+        - MeshBuffer: meshbuffer.md
+        - Material: material.md
+        - Empty: empty.md
+        - Hitbox: hitbox.md
+        - Billboard: billboard.md
+        - Text3D: text3d.md
+        - Water: water.md
+        - Light: light.md
+        - LegacyLight: legacylight.md
+        - ParticleSystem: particlesystem.md
+        - Trail: trail.md
+      - Vector2D: vector2d.md
+      - Vector3D: vector3d.md
+      - Vector4D: vector4d.md
+      - Texture: texture.md
+      - Packet: packet.md
+  - Examples:
+    - 01 Hello World: example-01.md
+
+repo_url: https://github.com/darttheg/Lime
+repo_name: Lime
