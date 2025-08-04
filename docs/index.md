@@ -9,7 +9,7 @@ Welcome to the documentation of **Lime Engine**, a 2D and 3D game engine powered
 ---
 
 ## Links
-> [Latest Release](https://github.com/darttheg/Lime/releases/download/Release/Lime-Release-x64.zip) (v1.0.beta1)  
+> [Latest Release](https://github.com/darttheg/Lime/releases/download/Release/Lime-Release-x64.zip)  
 > [Source](https://github.com/darttheg/Lime/tree/main)
 
 ---
