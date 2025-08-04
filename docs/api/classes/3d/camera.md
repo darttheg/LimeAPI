@@ -15,7 +15,6 @@
     | .orthogonal | bool | Is the Camera orthogonal |
     | .fieldOfView | float | Set/get the field of view (degrees); for orthogonal cameras, .fieldOfView acts as a zoom scalar |
     | .visible | bool | Set/get camera visibility |
-    | .target | [Vector3D](vector3d.md) | Camera target |
     | .aspectRatio | float | Camera aspect ratio |
     | .up | [Vector3D](vector3d.md) | Camera up vector |
 
@@ -27,6 +26,5 @@
     | :getLeft() | [Vector3D](vector3d.md) | Returns the camera's left direction |
     | :getAbsolutePosition() | [Vector3D](vector3d.md) | Returns the world position |
     | :setActive() | | Sets this camera as the active camera |
-    | :useTarget(bool `x`) | | Enables or disables automatic rotation to face the target (`false` by default) |
     | :queue(bool `legacy`) | | Queues this camera to render on top of the active one; `legacy` determines if xEffects are used |
     | :destroy() | | Destroys the object |
