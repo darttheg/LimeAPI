@@ -32,14 +32,14 @@ nav:
   - API:
     - Runtime: ./api/runtime.md
     - Modules:
-      - Lime: lime.md
-      - Input: input.md
-      - GUI: gui.md
-      - World: world.md
-      - Sound: sound.md
+      - Lime: ./api/modules/lime.md
+      - Input: ./api/modules/input.md
+      - GUI: ./api/modules/gui.md
+      - World: ./api/modules/world.md
+      - Sound: ./api/modules/sound.md
       - Network:
-        - NetworkClient: networkclient.md
-        - NetworkServer: networkserver.md
+        - NetworkClient: ./api/modules/networkclient.md
+        - NetworkServer: ./api/modules/networkserver.md
     - Classes:
       - 2D:
         - Image2D: ./api/classes/2d/image2d.md
