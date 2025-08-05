@@ -16,7 +16,7 @@
     | - | - | - |
     | Input.IsKeyDown(int `key`) | bool | Returns whether the key is currently pressed |
     | Input.GetMouseState() | Lua table | Returns `{ position = Vector2D, leftDown = bool, rightDown = bool, middleDown = bool, wheelDelta = float }` |
-    | Input.GetMouseDelta([Vector2D][vector2d] `delta`) | [Vector2D][vector2d] | Returns the change in mouse position |
+    | Input.GetMouseDelta() | [Vector2D][vector2d] | Returns the change in mouse position |
     | Input.GetControllerState() | Lua table | Returns `{ axis = table, buttons = table }` |
     | Input.CheckControllers() |  | Checks for connected/disconnected controllers |
     | Input.SetMouseVisibility(bool `visible`) |  | Sets whether the mouse cursor is visible |
