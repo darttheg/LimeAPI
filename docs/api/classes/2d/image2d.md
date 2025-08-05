@@ -28,7 +28,9 @@
     | :setMaxSize([Vector2D](vector2d.md) `maxSize`) | | Sets max display size; crops image beyond `maxSize` |
     | :toFront() | | Moves image to the top of the z-order |
     | :toBack() | | Moves image to the back of the z-order |
-    | :setBorderAlignment(int `left`, int `right`, int `top`, int `bottom`) | | Sets image border alignment (see `irrlicht.GUI_ALIGNMENT`) |
+    | :setBorderAlignment(int `left`, int `right`, int `top`, int `bottom`) | | Sets image border alignment, see [GUI_ALIGNMENT][gui_alignment] |
     | :setParent(Image2D `other`) | | Parents this image to another `Image2D` |
     | :fireOnClick(Function `f`) | | Binds function `f`, called with a bool when image is pressed/released |
     | :fireOnHover(Function `f`) | | Binds function `f`, called with a bool when mouse hovers/unhovers |
+
+[gui-alignment]: https://darttheg.github.io/LimeAPI/api/structs.html#gui_alignment

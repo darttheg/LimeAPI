@@ -29,5 +29,7 @@
     | Lime.SetShowConsole(bool `show`) ⚠️ |  | Shows console |
     | Lime.SetWriteConsole(bool `write`) |  | Writes console output to `output.txt` |
     | Lime.SetVSync(bool `enable`) ⚠️ |  | Enables/disables vertical sync |
-    | Lime.DisplayMessage(String `title`, String `message`, int `icon`) |  | Displays a Windows pop-up message; see `irrlicht.MESSAGE_ICON` |
+    | Lime.DisplayMessage(String `title`, String `message`, int `icon`) |  | Displays a Windows pop-up message; see [MESSAGE_ICON][message_icon] |
     | Lime.RecreateDevice() | | Applies any window changes such as a change in driver type and creates a new window (**Currently crashes**)
+
+[message_icon]: https://darttheg.github.io/LimeAPI/api/structs.html#message_icon

@@ -25,8 +25,8 @@
     | World.SetShadows(bool `enable`) ⚠️ |  | Enables or disables shadows |
     | World.GetRenderTexture([Camera](camera.md) `camera`, [Vector2D](vector2d.md) `size`, bool `renderGUI`) | [Texture](texture.md) | Returns a texture of the camera’s view of the scene with optional GUI rendering |
     | World.Clear(bool `wipeCaches`) |  | Removes all 3D components; if `wipeCaches` is true, clears all mesh caches |
-    | World.SetDefaultShadowFiltering(int `mode`) |  | Sets default shadow filtering; see `irrlicht.SHADOW_FILTER_SAMPLING` |
-    | World.SetDefaultShadowResolution(int `res`) |  | Sets default shadow resolution; see `irrlicht.SHADOW_RESOLUTION` |
+    | World.SetDefaultShadowFiltering(int `mode`) |  | Sets default shadow filtering; see [SHADOW_FILTER_SAMPLING][shadow_filter_sampling] |
+    | World.SetDefaultShadowResolution(int `res`) |  | Sets default shadow resolution; see [SHADOW_RESOLUTION][shadow_resolution] |
     | World.SetDefaultLightingExclusion(bool `exclude`) |  | Sets whether new objects are excluded from lighting |
     | World.PreloadMesh(String `filePath`) |  | Preloads a mesh from file path |
     | World.PreloadTexture(String `filePath`) |  | Preloads a texture from file path |
@@ -35,4 +35,8 @@
     | World.SetLegacyDrawing(bool `enable`) |  | If enabled, xEffects lighting and shadows are ignored |
     | World.SetShadowColor([Vector4D](vector4d.md) `color`) |  | Sets legacy shadow color |
     | World.SetShadowOpacity(int `opacity`) |  | Sets legacy shadow opacity |
-    | World.SetLightManagementMode(int `mode`) |  | Sets light management mode; see `irrlicht.LIGHT_MANAGEMENT_MODE`:<br>• `Distance to Camera` – default; closest 8 lights to camera<br>• `Nearest to Object` – 3 closest to object<br>• `Zone` – lights only affect objects under the same `Empty` |
+    | World.SetLightManagementMode(int `mode`) |  | Sets light management mode; see [LIGHT_MANAGEMENT_MODE][light_management_mode]:<br>• `Distance to Camera` – default; closest 8 lights to camera<br>• `Nearest to Object` – 3 closest to object<br>• `Zone` – lights only affect objects under the same `Empty` |
+
+[shadow_filter_sampling]: https://darttheg.github.io/LimeAPI/api/structs.html#shadow_filter_sampling
+[shadow_resolution]: https://darttheg.github.io/LimeAPI/api/structs.html#shadow_resolution
+[light_management_mode]: https://darttheg.github.io/LimeAPI/api/structs.html#light_management_mode

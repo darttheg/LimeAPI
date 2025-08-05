@@ -15,7 +15,7 @@
     | Sound.SetChannelPosition3D(int `channel`, [Vector3D](vector3d.md) `position`) |  | Sets 3D position of a sound on the channel |
     | Sound.SetChannelMinimumDistance(int `channel`, float `distance`) |  | Sets minimum distance for full volume on a 3D sound |
     | Sound.ClearChannelEffects(int `channel`) |  | Removes all effects applied to the channel |
-    | Sound.SetChannelEffect(int `channel`, int `effect`, bool `enable`, table `parameters`) |  | Enables/disables a sound effect. See `irrlicht.SOUND_EFFECT`.<br><br>`DISTORTION` – `{ gain = float, edge = float }`<br>`ECHO` – `{ wetDry = float, feedback = float, delay = float }`<br>`REVERB` – `{ inputGain = float, reverbMix = float, reverbTime = float, frequencyRatio = float }`<br>`PARAMEQ` – `{ frequency = float, bandwidth = float, gain = float }`<br>`GARGLE` – `{ rate = float, sinusWaveForm = bool }` |
+    | Sound.SetChannelEffect(int `channel`, int `effect`, bool `enable`, table `parameters`) |  | Enables/disables a sound effect, see [SOUND_EFFECT][sound_effect].<br><br>`DISTORTION` – `{ gain = float, edge = float }`<br>`ECHO` – `{ wetDry = float, feedback = float, delay = float }`<br>`REVERB` – `{ inputGain = float, reverbMix = float, reverbTime = float, frequencyRatio = float }`<br>`PARAMEQ` – `{ frequency = float, bandwidth = float, gain = float }`<br>`GARGLE` – `{ rate = float, sinusWaveForm = bool }` |
     | Sound.SetChannelVolume(int `channel`, int `volume`) |  | Sets the volume of the channel |
     | Sound.SetChannelPitch(int `channel`, float `pitch`) |  | Sets the pitch of the sound |
     | Sound.SetChannelPan(int `channel`, float `pan`) |  | Sets the stereo pan of the sound |
@@ -25,3 +25,5 @@
     | Sound.SetChannelVelocity(int `channel`, [Vector3D](vector3d.md) `velocity`) |  | Sets velocity for Doppler effect |
     | Sound.SetDopplerEffectParameters(float `dopplerFactor`, float `distanceFactor`) |  | Sets Doppler effect parameters. `dopplerFactor` ranges `0.0–10.0` (default `1.0`), `distanceFactor` defines meters per unit (default `1.0`; use `0.3048` for feet/sec) |
     | Sound.IsChannelEmpty(int `channel`) | bool | Returns true if no sound is playing on the channel |
+
+[sound_effect]: https://darttheg.github.io/LimeAPI/api/structs.html#sound_effect

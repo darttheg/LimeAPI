@@ -15,9 +15,11 @@
 
     | Function | Returns | Description |
     | - | - | - |
-    | :append(int `dataType`, `data`) |  | Appends data of type `dataType` to the packet. See `irrlicht.DATA_TYPE`. For `FILE`, `data` should be a file path. |
+    | :append(int `dataType`, `data`) |  | Appends data of type `dataType` to the packet. See [DATA_TYPE][data_type]. For `FILE`, `data` should be a file path. |
     | :get(int `dataType`, int `bytePosition`) | any | Retrieves data of the specified type at the given byte position |
     | :getNext(int `dataType`) | any | Retrieves data at the current position and advances `.position` by `dataType` size |
     | :getSize() | int | Returns the size of the packet in bits |
     | :destroy() |  | Destroys the packet |
     | :writeToFile(int `bytePosition`, String `path`) |  | Writes data from `bytePosition` to `path` |
+
+[data-type]: https://darttheg.github.io/LimeAPI/api/structs.html#data_type

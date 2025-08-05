@@ -19,7 +19,7 @@
     | .frame | int | Frame of animation |
     | .debug | bool | Enable/disable debug data |
     | .vertexColor | [Vector4D](vector4d.md) | Vertex color; use `EMT_TRANSPARENT_VERTEX_ALPHA` to apply alpha blending |
-    | .shadows | int | Enable shadows (legacy only); see `irrlicht.SHADOW_MODE` |
+    | .shadows | int | Enable shadows (legacy only); see [SHADOW_MODE][shadow_mode] |
 
 === "Functions"
 
@@ -39,7 +39,7 @@
     | :getFrameCount() | int | Returns number of animation frames |
     | :normalizeNormals(bool `enable`) |  | Enables/disables normal normalization |
     | :toPlanarMapping() |  | Applies planar UV mapping to the mesh |
-    | :setHardwareMappingHint(int `hint`) |  | Sets hardware mapping strategy. See `irrlicht.HARDWARE_MAPPING_HINT`:<br><br>• `Never` – Do not store on hardware<br>• `Static` – Rarely changed<br>• `Dynamic` – Frequently changed<br>• `Stream` – Always changed |
+    | :setHardwareMappingHint(int `hint`) |  | Sets hardware mapping strategy. See [HARDWARE_MAPPING_HINT][hardware_mapping_hint]:<br><br>• `Never` – Do not store on hardware<br>• `Static` – Rarely changed<br>• `Dynamic` – Frequently changed<br>• `Stream` – Always changed |
     | :ignoreLighting() |  | Excludes this mesh from lighting calculations (not applicable in legacy rendering) |
     | :setParent(3DObject `other`) |  | Parents this mesh to another 3D object |
     | :getAbsolutePosition() | [Vector3D](vector3d.md) | Returns world position |
@@ -47,3 +47,6 @@
     | :getAbsoluteScale() | [Vector3D](vector3d.md) | Returns world scale |
     | :updateAbsolutePosition() |  | Updates world transform (non-recursive) |
     | :setAutomaticCulling(bool `enable`) |  | Enables/disables auto-culling based on bounding box |
+
+[shadow_mode]: https://darttheg.github.io/LimeAPI/api/structs.html#shadow_mode
+[hardware_mapping_hint]: https://darttheg.github.io/LimeAPI/api/structs.html#hardware_mapping_hint

@@ -33,5 +33,7 @@
     | :setMaxSize() |  | Sets the max visible size of the EditBox; crops beyond it |
     | :toFront() |  | Moves the EditBox to the top of the z-order |
     | :toBack() |  | Moves the EditBox to the back of the z-order |
-    | :setBorderAlignment(int `left`, int `right`, int `top`, int `bottom`) |  | Sets border alignment (see `irrlicht.GUI_ALIGNMENT`) |
+    | :setBorderAlignment(int `left`, int `right`, int `top`, int `bottom`) |  | Sets border alignment, see [GUI_ALIGNMENT][gui_alignment] |
     | :setParent([Image2D](image2d.md) `image`) |  | Parents this EditBox to the given image |
+
+[gui-alignment]: https://darttheg.github.io/LimeAPI/api/structs.html#gui_alignment

@@ -18,7 +18,7 @@
     | .height | float | Height of waves |
     | .speed | float | Speed of waves |
     | .length | float | Length of waves |
-    | .shadows | int | Enable shadows (legacy only); see `irrlicht.SHADOW_MODE` |
+    | .shadows | int | Enable shadows (legacy only); see [SHADOW_MODE][shadow_mode] |
 
 === "Functions"
 
@@ -32,3 +32,5 @@
     | :getAbsoluteRotation() | [Vector3D](vector3d.md) | Returns world-space rotation |
     | :getAbsoluteScale() | [Vector3D](vector3d.md) | Returns world-space scale |
     | :updateAbsolutePosition() |  | Updates world transform (non-recursive) |
+
+[shadow_mode]: https://darttheg.github.io/LimeAPI/api/structs.html#shadow_mode

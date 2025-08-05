@@ -43,4 +43,6 @@
     | :setTextureUWrapping(int `layer`, int `type`) |  | Sets U-axis texture wrapping |
     | :setTextureVWrapping(int `layer`, int `type`) |  | Sets V-axis texture wrapping |
     | :setTexture([Texture](texture.md) `texture`, int `slot`) |  | Sets the texture for the given slot |
-    | :setMaterialFlag(int `flag`, bool `enable`) |  | Enables or disables a material flag (see `irrlicht.MATERIAL_FLAG`) |
+    | :setMaterialFlag(int `flag`, bool `enable`) |  | Enables or disables a material flag, see [MATERIAL_FLAG][material_flag] |
+
+    [material_flag]: https://darttheg.github.io/LimeAPI/api/structs.html#material_flag

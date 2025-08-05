@@ -31,7 +31,9 @@
     | :setMaxSize() |  | Sets the max visible size; crops beyond it |
     | :toFront() |  | Moves the Text2D to the top of the z-order |
     | :toBack() |  | Moves the Text2D to the back of the z-order |
-    | :setBorderAlignment(int `left`, int `right`, int `top`, int `bottom`) |  | Sets border alignment (see `irrlicht.GUI_ALIGNMENT`) |
+    | :setBorderAlignment(int `left`, int `right`, int `top`, int `bottom`) |  | Sets border alignment, see [GUI_ALIGNMENT][gui_alignment] |
     | :setParent([Image2D](image2d.md) `image`) |  | Parents this Text2D to the given image |
     | :fireOnClick(Function `f`) |  | Binds function `f` with a bool indicating press/release |
     | :fireOnHover(Function `f`) |  | Binds function `f` with a bool indicating hover/unhover |
+
+[gui_alignment]: https://darttheg.github.io/LimeAPI/api/structs.html#gui_alignment
