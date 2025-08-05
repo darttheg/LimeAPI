@@ -71,6 +71,15 @@ nav:
     - Structs: ./api/structs.md
   - Examples:
     - 01 Hello World: example-01.md
+    - 02 Collisions and Hitboxes: example-01.md
+    - 03 Input: example-01.md
+    - 04 Sound Channels: example-01.md
+    - 05 Materials: example-01.md
+    - 06 Textures: example-01.md
+    - 07 Lighting: example-01.md
+    - 08 Multiplayer: example-01.md
+    - 09 MeshBuffer: example-01.md
+    - 10 Packaging and Release: example-01.md
 
 repo_url: https://github.com/darttheg/Lime
 repo_name: Lime

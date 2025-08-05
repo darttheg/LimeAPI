@@ -1,3 +1,5 @@
+> ⚠️ IrrKlang will be replaced with a new sound library, which will make major changes to how Lime handles sound in the near future.
+
 === "Functions"
 
     | Function | Returns | Description |
