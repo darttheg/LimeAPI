@@ -16,10 +16,10 @@
     | Lime.SetFullscreen(bool `fullscreen`) |  | Set fullscreen or windowed mode |
     | Lime.SetCaption(String `caption`) |  | Set window caption |
     | Lime.GetCaption() | String | Returns window caption text |
-    | Lime.SetWindowPosition([Vector2D](vector2d.md) `position`) |  | Set window position |
-    | Lime.SetWindowSize([Vector2D](vector2d.md) `size`) ⚠️ |  | Set size of the application |
-    | Lime.GetWindowSize() | [Vector2D](vector2d.md) | Returns the size of the render window |
-    | Lime.GetMonitorSize() | [Vector2D](vector2d.md) | Returns the size of the user's monitor |
+    | Lime.SetWindowPosition([Vector2D][vector2d] `position`) |  | Set window position |
+    | Lime.SetWindowSize([Vector2D][vector2d] `size`) ⚠️ |  | Set size of the application |
+    | Lime.GetWindowSize() | [Vector2D][vector2d] | Returns the size of the render window |
+    | Lime.GetMonitorSize() | [Vector2D][vector2d] | Returns the size of the user's monitor |
     | Lime.EndApplication() |  | Ends the application |
     | Lime.IsWindowFocused() | bool | Returns whether the window is focused |
     | Lime.SetResizable(bool `allow`) |  | Sets whether the application should be resizable |
@@ -33,3 +33,5 @@
     | Lime.RecreateDevice() | | Applies any window changes such as a change in driver type and creates a new window (**Currently crashes**)
 
 [message_icon]: https://darttheg.github.io/LimeAPI/api/structs.html#message_icon
+
+[vector2d]: https://darttheg.github.io/LimeAPI/api/classes/vector2d.html

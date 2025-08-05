@@ -8,9 +8,9 @@
 
     | Property | Type | Description |
     | - | - | - |
-    | .position | [Vector3D](vector3d.md) | Particle system position |
-    | .rotation | [Vector3D](vector3d.md) | Particle system rotation |
-    | .scale | [Vector3D](vector3d.md) | Particle system scale |
+    | .position | [Vector3D][vector3d] | Particle system position |
+    | .rotation | [Vector3D][vector3d] | Particle system rotation |
+    | .scale | [Vector3D][vector3d] | Particle system scale |
     | .debug | bool | Enable/disable debug data |
     | .active | bool | Enable/disable updating |
     | .visible | bool | Set/get visibility |
@@ -21,12 +21,12 @@
     | - | - | - |
     | :destroy() |  | Removes the particle system in Irrlicht |
     | :setParent(3DObject `other`) |  | Parents this 3D object to another |
-    | :getAbsolutePosition() | [Vector3D](vector3d.md) | Returns world position |
-    | :getAbsoluteRotation() | [Vector3D](vector3d.md) | Returns world rotation |
-    | :getAbsoluteScale() | [Vector3D](vector3d.md) | Returns world scale |
+    | :getAbsolutePosition() | [Vector3D][vector3d] | Returns world position |
+    | :getAbsoluteRotation() | [Vector3D][vector3d] | Returns world rotation |
+    | :getAbsoluteScale() | [Vector3D][vector3d] | Returns world scale |
     | :updateAbsolutePosition() |  | Updates world transform (non-recursive) |
     | :setDoAbsoluteTracking(bool `enable`) |  | Sets whether particles move relative to the object (default `true`) |
-    | :loadMaterial([Material](material.md) `material`) |  | Loads material (**Must apply before setting emitter!**) |
+    | :loadMaterial([Material][material] `material`) |  | Loads material (**Must apply before setting emitter!**) |
     | :clearAffectors() |  | Clears all applied affectors |
     | :clearParticles() |  | Clears emitted particles |
     | :spark(int `particleAmount`) |  | Emits `particleAmount` particles instantly |
@@ -35,3 +35,8 @@
 
 [particle_emitter_type]: https://darttheg.github.io/LimeAPI/api/structs.html#particle_emitter_type
 [particle_affector_type]: https://darttheg.github.io/LimeAPI/api/structs.html#particle_affector_type
+
+[vector2d]: https://darttheg.github.io/LimeAPI/api/classes/vector2d.html
+[vector3d]: https://darttheg.github.io/LimeAPI/api/classes/vector3d.html
+[vector4d]: https://darttheg.github.io/LimeAPI/api/classes/vector4d.html
+[material]: https://darttheg.github.io/LimeAPI/api/classes/3d/material.html

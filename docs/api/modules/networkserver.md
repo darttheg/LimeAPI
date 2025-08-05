@@ -14,7 +14,8 @@
     | NetworkServer.GetPeerState(int `peerID`) | int | Returns state of peer; see [PEER_STATE][peer_state] |
     | NetworkServer.GetPeerPing(int `peerID`) | int | Returns ping time of peer in milliseconds |
     | NetworkServer.DisconnectPeer(int `peerID`, int `reasonCode`) |  | Forcefully disconnects peer with `reasonCode` <br>Client receives: `NetworkClient.OnDisconnect(int reasonCode)` |
-    | NetworkServer.SendPacketToPeer(int `peerID`, int `channel`, [Packet](packet.md) `packet`, bool `TCP`) |  | Sends `packet` to a peer over specified channel and protocol <br>Client receives: `NetworkClient.OnPacketReceived(int channel, [Packet](packet.md) packet)` |
-    | NetworkServer.SendPacketToAll(int `channel`, [Packet](packet.md) `packet`, bool `TCP`) |  | Sends `packet` to all peers on the specified channel <br>Clients receive: `NetworkClient.OnPacketReceived(int channel, [Packet](packet.md) packet)` |
+    | NetworkServer.SendPacketToPeer(int `peerID`, int `channel`, [Packet][packet] `packet`, bool `TCP`) |  | Sends `packet` to a peer over specified channel and protocol <br>Client receives: `NetworkClient.OnPacketReceived(int channel, [Packet][packet] packet)` |
+    | NetworkServer.SendPacketToAll(int `channel`, [Packet][packet] `packet`, bool `TCP`) |  | Sends `packet` to all peers on the specified channel <br>Clients receive: `NetworkClient.OnPacketReceived(int channel, [Packet][packet] packet)` |
 
 [peer_state]: https://darttheg.github.io/LimeAPI/api/structs.html#peer_state
+[packet]: https://darttheg.github.io/LimeAPI/api/classes/packet.html

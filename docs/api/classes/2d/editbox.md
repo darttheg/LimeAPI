@@ -4,19 +4,19 @@
     | - | - |
     | EditBox.new() | Creates a default EditBox |
     | EditBox.new(String `text`) | Creates an EditBox with initial text |
-    | EditBox.new(String `text`, [Vector3D](vector3d.md) `position`) | Creates an EditBox at `position` with text |
-    | EditBox.new(String `text`, [Vector3D](vector3d.md) `position`, [Vector3D](vector3d.md) `dimensions`) | Creates an EditBox at `position` with text and size |
+    | EditBox.new(String `text`, [Vector3D][vector3d] `position`) | Creates an EditBox at `position` with text |
+    | EditBox.new(String `text`, [Vector3D][vector3d] `position`, [Vector3D][vector3d] `dimensions`) | Creates an EditBox at `position` with text and size |
 
 === "Alterables"
 
     | Property | Type | Description |
     | - | - | - |
-    | .position | [Vector2D](vector2d.md) | EditBox position |
+    | .position | [Vector2D][vector2d] | EditBox position |
     | .text | String | Text content |
     | .visible | bool | EditBox visibility |
-    | .size | [Vector2D](vector2d.md) | Copy of EditBox size |
+    | .size | [Vector2D][vector2d] | Copy of EditBox size |
     | .wrap | bool | Enable/disable word wrap |
-    | .textColor | [Vector4D](vector4d.md) | Text color |
+    | .textColor | [Vector4D][vector4d] | Text color |
     | .drawBorder | bool | Draw text box border |
     | .focused | bool | Whether the EditBox is focused |
     | .enabled | bool | Enable or disable the EditBox |
@@ -34,6 +34,11 @@
     | :toFront() |  | Moves the EditBox to the top of the z-order |
     | :toBack() |  | Moves the EditBox to the back of the z-order |
     | :setBorderAlignment(int `left`, int `right`, int `top`, int `bottom`) |  | Sets border alignment, see [GUI_ALIGNMENT][gui_alignment] |
-    | :setParent([Image2D](image2d.md) `image`) |  | Parents this EditBox to the given image |
+    | :setParent([Image2D][image2d] `image`) |  | Parents this EditBox to the given image |
 
 [gui-alignment]: https://darttheg.github.io/LimeAPI/api/structs.html#gui_alignment
+
+[vector2d]: https://darttheg.github.io/LimeAPI/api/classes/vector2d.html
+[vector4d]: https://darttheg.github.io/LimeAPI/api/classes/vector4d.html
+[texture]: https://darttheg.github.io/LimeAPI/api/classes/texture.html
+[image2d]: https://darttheg.github.io/LimeAPI/api/classes/2d/image2d.html

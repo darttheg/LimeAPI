@@ -5,7 +5,7 @@
     | Input.OnLeftMouseClick() | On left click | Left mouse click function |
     | Input.OnRightMouseClick() | On right click | Right mouse click function |
     | Input.OnMiddleMouseClick() | On middle click | Middle mouse click function |
-    | Input.OnMouseMove([Vector2D](vector2d.md) `position`) | On mouse move | Mouse move function |
+    | Input.OnMouseMove([Vector2D][vector2d] `position`) | On mouse move | Mouse move function |
     | Input.OnMouseScroll(float `wheelDelta`) | On scroll | Mouse scroll function |
     | Input.OnKeyPressed(int `key`) | On key press | On key pressed function |
     | Input.OnKeyReleased(int `key`) | On key release | On key released function |
@@ -19,4 +19,6 @@
     | Input.GetControllerState() | Lua table | Returns `{ axis = table, buttons = table }` |
     | Input.CheckControllers() |  | Checks for connected/disconnected controllers |
     | Input.SetMouseVisibility(bool `visible`) |  | Sets whether the mouse cursor is visible |
-    | Input.SetMousePosition([Vector2D](vector2d.md) `position`) |  | Sets the position of the mouse cursor |
+    | Input.SetMousePosition([Vector2D][vector2d] `position`) |  | Sets the position of the mouse cursor |
+
+[vector2d]: https://darttheg.github.io/LimeAPI/api/classes/vector2d.html

@@ -10,9 +10,9 @@
 
     | Property | Type | Description |
     | - | - | - |
-    | .position | [Vector3D](vector3d.md) | Mesh position |
-    | .rotation | [Vector3D](vector3d.md) | Mesh rotation |
-    | .scale | [Vector3D](vector3d.md) | Mesh scale |
+    | .position | [Vector3D][vector3d] | Mesh position |
+    | .rotation | [Vector3D][vector3d] | Mesh rotation |
+    | .scale | [Vector3D][vector3d] | Mesh scale |
     | .visible | bool | Mesh visibility |
     | .ID | int | Mesh ID (defaults to -1; intended to change to positive int for optimization) |
     | .collision | bool | Enable/disable collision |
@@ -26,8 +26,8 @@
     | Function | Returns | Description |
     | - | - | - |
     | :load(String `path`) |  | Loads a mesh from `path` |
-    | :loadFromBuffer([MeshBuffer](meshbuffer.md) `buffer`) |  | Loads mesh data from a mesh buffer |
-    | :loadMaterial([Material](material.md) `material`, int `slot`) |  | Loads `material` into `slot` index |
+    | :loadFromBuffer([MeshBuffer][meshbuffer] `buffer`) |  | Loads mesh data from a mesh buffer |
+    | :loadMaterial([Material][material] `material`, int `slot`) |  | Loads `material` into `slot` index |
     | :destroy() |  | Destroys the object |
     | :writeToFile(String `path`) |  | Exports mesh in COLLADA format to `path` |
     | :getVertexCount() | int | Returns the number of vertices in the mesh |
@@ -42,11 +42,16 @@
     | :setHardwareMappingHint(int `hint`) |  | Sets hardware mapping strategy. See [HARDWARE_MAPPING_HINT][hardware_mapping_hint]:<br><br>• `Never` – Do not store on hardware<br>• `Static` – Rarely changed<br>• `Dynamic` – Frequently changed<br>• `Stream` – Always changed |
     | :ignoreLighting() |  | Excludes this mesh from lighting calculations (not applicable in legacy rendering) |
     | :setParent(3DObject `other`) |  | Parents this mesh to another 3D object |
-    | :getAbsolutePosition() | [Vector3D](vector3d.md) | Returns world position |
-    | :getAbsoluteRotation() | [Vector3D](vector3d.md) | Returns world rotation |
-    | :getAbsoluteScale() | [Vector3D](vector3d.md) | Returns world scale |
+    | :getAbsolutePosition() | [Vector3D][vector3d] | Returns world position |
+    | :getAbsoluteRotation() | [Vector3D][vector3d] | Returns world rotation |
+    | :getAbsoluteScale() | [Vector3D][vector3d] | Returns world scale |
     | :updateAbsolutePosition() |  | Updates world transform (non-recursive) |
     | :setAutomaticCulling(bool `enable`) |  | Enables/disables auto-culling based on bounding box |
 
 [shadow_mode]: https://darttheg.github.io/LimeAPI/api/structs.html#shadow_mode
 [hardware_mapping_hint]: https://darttheg.github.io/LimeAPI/api/structs.html#hardware_mapping_hint
+
+[vector2d]: https://darttheg.github.io/LimeAPI/api/classes/vector2d.html
+[vector3d]: https://darttheg.github.io/LimeAPI/api/classes/vector3d.html
+[meshbuffer]: https://darttheg.github.io/LimeAPI/api/classes/3d/meshbuffer.html
+[material]: https://darttheg.github.io/LimeAPI/api/classes/3d/material.html
