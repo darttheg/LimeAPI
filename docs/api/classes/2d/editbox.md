@@ -4,8 +4,8 @@
     | - | - |
     | EditBox.new() | Creates a default EditBox |
     | EditBox.new(String `text`) | Creates an EditBox with initial text |
-    | EditBox.new(String `text`, [Vector3D][vector3d] `position`) | Creates an EditBox at `position` with text |
-    | EditBox.new(String `text`, [Vector3D][vector3d] `position`, [Vector3D][vector3d] `dimensions`) | Creates an EditBox at `position` with text and size |
+    | EditBox.new(String `text`, [Vector2D][vector2d] `position`) | Creates an EditBox at `position` with text |
+    | EditBox.new(String `text`, [Vector2D][vector2d] `position`, [Vector2D][vector2d] `dimensions`) | Creates an EditBox at `position` with text and size |
 
 === "Alterables"
 
