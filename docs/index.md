@@ -22,5 +22,4 @@ Visit these resources to learn more before diving into Lime:
 > [Programming in Lua](https://lua.org/pil/)  
 > [Lua User Tutorials](http://lua-users.org/wiki/TutorialDirectory)  
 
-With Lua under your belt, you are ready to dive into Lime.  
-Use the **sidebar** to navigate the API.
+When you're ready, use the sidebar to navigate the API.

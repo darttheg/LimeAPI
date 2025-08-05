@@ -18,6 +18,8 @@ theme:
     - search.suggest
 
 markdown_extensions:
+  - admonition
+  - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.superfences:
