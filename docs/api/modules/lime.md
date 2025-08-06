@@ -16,6 +16,9 @@
     | Lime.SetFullscreen(bool `fullscreen`) |  | Set fullscreen or windowed mode |
     | Lime.SetCaption(String `caption`) |  | Set window caption |
     | Lime.GetCaption() | String | Returns window caption text |
+    | Lime.GetFrameRate() | int | Returns the current frame rate of the application |
+    | Lime.SetFrameRate(int `fps`) |  | Sets the target frame rate |
+    | Lime.GetMemoryUsage() | float | Returns application memory usage in megabytes |
     | Lime.SetWindowPosition([Vector2D][vector2d] `position`) |  | Set window position |
     | Lime.SetWindowSize([Vector2D][vector2d] `size`) ⚠️ |  | Set size of the application |
     | Lime.GetWindowSize() | [Vector2D][vector2d] | Returns the size of the render window |

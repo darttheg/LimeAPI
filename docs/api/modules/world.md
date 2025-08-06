@@ -4,9 +4,6 @@
 
     | Function | Returns | Description |
     | - | - | - |
-    | World.GetFrameRate() | int | Returns the current frame rate of the application |
-    | World.SetFrameRate(int `fps`) |  | Sets the target frame rate (**FPS cap is ~65 for unknown reasons**) |
-    | World.GetMemoryUsage() | float | Returns application memory usage in megabytes |
     | World.SetSkydome([Texture][texture] `sky`) |  | Sets the texture of the skydome |
     | World.SetSkydomeParameters(int `resX`, int `resY`, float `texturePercent`, float `spherePercent`, float `radius`) |  | Sets additional skydome parameters |
     | World.SetBackgroundColor([Vector4D][vector4d] `color`) |  | Sets world background color |
