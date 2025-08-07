@@ -21,6 +21,7 @@
     | Lime.GetMemoryUsage() | float | Returns application memory usage in megabytes |
     | Lime.SetWindowPosition([Vector2D][vector2d] `position`) |  | Set window position |
     | Lime.SetWindowSize([Vector2D][vector2d] `size`) ⚠️ |  | Set size of the application |
+    | Lime.SetAutoAspectRatio(bool `enable`) | | Set whether or not Lime mains aspect ratio when resized |
     | Lime.GetWindowSize() | [Vector2D][vector2d] | Returns the size of the render window |
     | Lime.GetMonitorSize() | [Vector2D][vector2d] | Returns the size of the user's monitor |
     | Lime.EndApplication() |  | Ends the application |
