@@ -9,7 +9,7 @@ exclude: true
 <h5>Posted August 7th, 2025</h5>  
 This beta release reorganizes some module functions and reworks the window for better general functionality.
 
-* Added [Lime.GetVersion][lime] retrieves the version of Lime running.
+* Added [Lime.GetVersion][lime], which retrieves the version of Lime running.
 * Moved some [World][world] functions to [Lime][lime]:  
       * [Lime.GetFrameRate][lime]
       * [Lime.SetFrameRate][lime]
