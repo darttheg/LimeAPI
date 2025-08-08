@@ -1,0 +1,2513 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="classes/packet.html">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Structs - Lime API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CNoto+Sans:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Noto Sans"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#structures" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Lime API" class="md-header__button md-logo" aria-label="Lime API" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lime API
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Structs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/darttheg/Lime" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Lime
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Lime API" class="md-nav__button md-logo" aria-label="Lime API" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Lime API
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/darttheg/Lime" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Lime
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    News
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="runtime.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Runtime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modules
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/lime.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/input.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/gui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GUI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/world.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/sound.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sound
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_6" id="__nav_3_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Network
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Network
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/networkclient.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NetworkClient
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/networkserver.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NetworkServer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Classes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    2D
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            2D
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/2d/image2d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Image2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/2d/text2d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Text2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/2d/editbox.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EditBox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    3D
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            3D
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2_1" id="__nav_3_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Physics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Physics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coming Soon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/camera.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camera
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/mesh.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mesh
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/meshbuffer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MeshBuffer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/material.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Material
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/empty.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Empty
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/hitbox.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hitbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/billboard.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/text3d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Text3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/water.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Water
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/light.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Light
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/legacylight.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LegacyLight
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/particlesystem.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ParticleSystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/3d/trail.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trail
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/vector2d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vector2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/vector3d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vector3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/vector4d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vector4D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/texture.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Texture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes/packet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Structs
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="structs.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Structs
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#driver_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      DRIVER_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fog_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      FOG_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware_mapping_hint" class="md-nav__link">
+    <span class="md-ellipsis">
+      HARDWARE_MAPPING_HINT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material_flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      MATERIAL_FLAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      MATERIAL_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color_material" class="md-nav__link">
+    <span class="md-ellipsis">
+      COLOR_MATERIAL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#render_target" class="md-nav__link">
+    <span class="md-ellipsis">
+      RENDER_TARGET
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shadow_filter_sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHADOW_FILTER_SAMPLING
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shadow_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHADOW_MODE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shadow_resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHADOW_RESOLUTION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texture_clamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEXTURE_CLAMP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texture_creation_flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEXTURE_CREATION_FLAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti_aliasing_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANTI_ALIASING_MODE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color_plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      COLOR_PLANE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison_func" class="md-nav__link">
+    <span class="md-ellipsis">
+      COMPARISON_FUNC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polygon_offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      POLYGON_OFFSET
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transform_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      TRANSFORM_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blend_operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLEND_OPERATION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legacy_light_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      LEGACY_LIGHT_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light_management_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      LIGHT_MANAGEMENT_MODE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#particle_affector_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      PARTICLE_AFFECTOR_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#particle_emitter_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      PARTICLE_EMITTER_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      DATA_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message_icon" class="md-nav__link">
+    <span class="md-ellipsis">
+      MESSAGE_ICON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peer_state" class="md-nav__link">
+    <span class="md-ellipsis">
+      PEER_STATE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sound_effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      SOUND_EFFECT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignment_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALIGNMENT_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anchor_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANCHOR_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gui_alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      GUI_ALIGNMENT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trail_alignment_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      TRAIL_ALIGNMENT_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key_code" class="md-nav__link">
+    <span class="md-ellipsis">
+      KEY_CODE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mouse_code" class="md-nav__link">
+    <span class="md-ellipsis">
+      MOUSE_CODE
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example-01.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hello World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#driver_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      DRIVER_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fog_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      FOG_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware_mapping_hint" class="md-nav__link">
+    <span class="md-ellipsis">
+      HARDWARE_MAPPING_HINT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material_flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      MATERIAL_FLAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      MATERIAL_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color_material" class="md-nav__link">
+    <span class="md-ellipsis">
+      COLOR_MATERIAL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#render_target" class="md-nav__link">
+    <span class="md-ellipsis">
+      RENDER_TARGET
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shadow_filter_sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHADOW_FILTER_SAMPLING
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shadow_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHADOW_MODE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shadow_resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHADOW_RESOLUTION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texture_clamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEXTURE_CLAMP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texture_creation_flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEXTURE_CREATION_FLAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti_aliasing_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANTI_ALIASING_MODE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color_plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      COLOR_PLANE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison_func" class="md-nav__link">
+    <span class="md-ellipsis">
+      COMPARISON_FUNC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polygon_offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      POLYGON_OFFSET
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transform_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      TRANSFORM_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blend_operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLEND_OPERATION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legacy_light_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      LEGACY_LIGHT_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light_management_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      LIGHT_MANAGEMENT_MODE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#particle_affector_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      PARTICLE_AFFECTOR_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#particle_emitter_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      PARTICLE_EMITTER_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      DATA_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message_icon" class="md-nav__link">
+    <span class="md-ellipsis">
+      MESSAGE_ICON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peer_state" class="md-nav__link">
+    <span class="md-ellipsis">
+      PEER_STATE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sound_effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      SOUND_EFFECT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignment_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALIGNMENT_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anchor_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANCHOR_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gui_alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      GUI_ALIGNMENT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trail_alignment_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      TRAIL_ALIGNMENT_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key_code" class="md-nav__link">
+    <span class="md-ellipsis">
+      KEY_CODE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mouse_code" class="md-nav__link">
+    <span class="md-ellipsis">
+      MOUSE_CODE
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="structures">Structures</h1>
+<blockquote>
+<p>Download this page as a Lua table <a href="https://raw.githubusercontent.com/darttheg/Lime/refs/heads/main/structures.lua">here</a>.<br />
+Structs make it easy to know exactly what fields and types are expected as parameters.<br />
+See below:   </p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">structs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;structures&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">Lime</span><span class="p">.</span><span class="nf">SetDriverType</span><span class="p">(</span><span class="nv">structs</span><span class="p">.</span><span class="py">DRIVER_TYPE</span><span class="p">.</span><span class="py">DIRECT3D9</span><span class="p">)</span><span class="w"> </span><span class="c1">-- 4</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="driver_type">DRIVER_TYPE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">NULL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">SOFTWARE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">BURNINGSVIDEO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">DIRECT3D8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">DIRECT3D9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">OPENGL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">COUNT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+</code></pre></div>
+<h3 id="fog_type">FOG_TYPE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">EXP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">LINEAR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">EXP2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div>
+<h3 id="hardware_mapping_hint">HARDWARE_MAPPING_HINT</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">NEVER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">STATIC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">DYNAMIC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">STREAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+</code></pre></div>
+<h3 id="material_flag">MATERIAL_FLAG</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">WIREFRAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x1</span>
+<span class="w">    </span><span class="nv">POINTCLOUD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x2</span>
+<span class="w">    </span><span class="nv">GOURAUD_SHADING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x4</span>
+<span class="w">    </span><span class="nv">LIGHTING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x8</span>
+<span class="w">    </span><span class="nv">ZBUFFER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x10</span>
+<span class="w">    </span><span class="nv">ZWRITE_ENABLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x20</span>
+<span class="w">    </span><span class="nv">BACK_FACE_CULLING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x40</span>
+<span class="w">    </span><span class="nv">FRONT_FACE_CULLING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x80</span>
+<span class="w">    </span><span class="nv">BILINEAR_FILTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x100</span>
+<span class="w">    </span><span class="nv">TRILINEAR_FILTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x200</span>
+<span class="w">    </span><span class="nv">ANISOTROPIC_FILTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x400</span>
+<span class="w">    </span><span class="nv">FOG_ENABLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x800</span>
+<span class="w">    </span><span class="nv">NORMALIZE_NORMALS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x1000</span>
+<span class="w">    </span><span class="nv">TEXTURE_WRAP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x2000</span>
+<span class="w">    </span><span class="nv">ANTI_ALIASING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x4000</span>
+<span class="w">    </span><span class="nv">COLOR_MASK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x8000</span>
+<span class="w">    </span><span class="nv">COLOR_MATERIAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x10000</span>
+<span class="w">    </span><span class="nv">USE_MIP_MAPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x20000</span>
+<span class="w">    </span><span class="nv">BLEND_OPERATION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x40000</span>
+<span class="w">    </span><span class="nv">POLYGON_OFFSET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x80000</span>
+</code></pre></div>
+<h3 id="material_type">MATERIAL_TYPE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">SOLID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">SOLID_2_LAYER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">LIGHTMAP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">LIGHTMAP_ADD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">LIGHTMAP_M2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">LIGHTMAP_M4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">LIGHTMAP_LIGHTING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+<span class="w">    </span><span class="nv">LIGHTMAP_LIGHTING_M2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span>
+<span class="w">    </span><span class="nv">LIGHTMAP_LIGHTING_M4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span>
+<span class="w">    </span><span class="nv">DETAIL_MAP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span>
+<span class="w">    </span><span class="nv">SPHERE_MAP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
+<span class="w">    </span><span class="nv">REFLECTION_2_LAYER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span>
+<span class="w">    </span><span class="nv">TRANSPARENT_ADD_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span>
+<span class="w">    </span><span class="nv">TRANSPARENT_ALPHA_CHANNEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span>
+<span class="w">    </span><span class="nv">TRANSPARENT_ALPHA_CHANNEL_REF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span>
+<span class="w">    </span><span class="nv">TRANSPARENT_VERTEX_ALPHA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span>
+<span class="w">    </span><span class="nv">TRANSPARENT_REFLECTION_2_LAYER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span>
+<span class="w">    </span><span class="nv">NORMAL_MAP_SOLID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span>
+<span class="w">    </span><span class="nv">NORMAL_MAP_TRANSPARENT_ADD_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span>
+<span class="w">    </span><span class="nv">NORMAL_MAP_TRANSPARENT_VERTEX_ALPHA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span>
+<span class="w">    </span><span class="nv">PARALLAX_MAP_SOLID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span>
+<span class="w">    </span><span class="nv">PARALLAX_MAP_TRANSPARENT_ADD_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span>
+<span class="w">    </span><span class="nv">PARALLAX_MAP_TRANSPARENT_VERTEX_ALPHA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">22</span>
+<span class="w">    </span><span class="nv">ONETEXTURE_BLEND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">23</span>
+<span class="w">    </span><span class="nv">FORCE_32BIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">24</span>
+</code></pre></div>
+<h3 id="color_material">COLOR_MATERIAL</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">NONE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">DIFFUSE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">AMBIENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">EMISSIVE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">SPECULAR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">DIFFUSE_AND_AMBIENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+</code></pre></div>
+<h3 id="render_target">RENDER_TARGET</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">FRAME_BUFFER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">RENDER_TEXTURE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">MULTI_RENDER_TEXTURES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">STEREO_LEFT_BUFFER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">STEREO_RIGHT_BUFFER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">STEREO_BOTH_BUFFERS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">AUX_BUFFER0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+<span class="w">    </span><span class="nv">AUX_BUFFER1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span>
+<span class="w">    </span><span class="nv">AUX_BUFFER2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span>
+<span class="w">    </span><span class="nv">AUX_BUFFER3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span>
+<span class="w">    </span><span class="nv">AUX_BUFFER4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
+</code></pre></div>
+<h3 id="shadow_filter_sampling">SHADOW_FILTER_SAMPLING</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">NONE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">SAMPLING_4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">SAMPLING_8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">SAMPLING_12</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">SAMPLING_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">COUNT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="c1">-- ?</span>
+</code></pre></div>
+<h3 id="shadow_mode">SHADOW_MODE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">RECEIVE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">CAST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">BOTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">COUNT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">NONE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+</code></pre></div>
+<h3 id="shadow_resolution">SHADOW_RESOLUTION</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">RES_256</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">RES_512</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">RES_1024</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">RES_2048</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">RES_4096</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+</code></pre></div>
+<h3 id="texture_clamp">TEXTURE_CLAMP</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">REPEAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">CLAMP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">CLAMP_TO_EDGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">CLAMP_TO_BORDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">MIRROR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">MIRROR_CLAMP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">MIRROR_CLAMP_TO_EDGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+<span class="w">    </span><span class="nv">MIRROR_CLAMP_TO_BORDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span>
+</code></pre></div>
+<h3 id="texture_creation_flag">TEXTURE_CREATION_FLAG</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">ALWAYS_16_BIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">ALWAYS_32_BIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">OPTIMIZED_FOR_QUALITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">OPTIMIZED_FOR_SPEED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">CREATE_MIP_MAPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">NO_ALPHA_CHANNEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">ALLOW_NON_POWER_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+</code></pre></div>
+<h3 id="anti_aliasing_mode">ANTI_ALIASING_MODE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">OFF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">SIMPLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">QUALITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">LINE_SMOOTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">POINT_SMOOTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">FULL_BASIC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">ALPHA_TO_COVERAGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+</code></pre></div>
+<h3 id="color_plane">COLOR_PLANE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">NONE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">ALPHA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">RED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">GREEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">BLUE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">RGB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">ALL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+</code></pre></div>
+<h3 id="comparison_func">COMPARISON_FUNC</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">NEVER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">LESSEQUAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">EQUAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">NOTEQUAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">GREATEREQUAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">GREATER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">ALWAYS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+</code></pre></div>
+<h3 id="polygon_offset">POLYGON_OFFSET</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">BACK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">FRONT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+</code></pre></div>
+<h3 id="transform_type">TRANSFORM_TYPE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">POSITION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">ROTATION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">SCALE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div>
+<h3 id="blend_operation">BLEND_OPERATION</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">NONE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">ADD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">SUBTRACT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">REVSUBTRACT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">MIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">MAX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">MIN_FACTOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+<span class="w">    </span><span class="nv">MAX_FACTOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span>
+<span class="w">    </span><span class="nv">MIN_ALPHA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span>
+<span class="w">    </span><span class="nv">MAX_ALPHA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span>
+</code></pre></div>
+<h3 id="legacy_light_type">LEGACY_LIGHT_TYPE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">POINT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">SPOT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">DIRECTIONAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div>
+<h3 id="light_management_mode">LIGHT_MANAGEMENT_MODE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">DISTANCE_TO_CAMERA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">NEAREST_TO_OBJECTS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">ZONE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div>
+<h3 id="particle_affector_type">PARTICLE_AFFECTOR_TYPE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">ATTRACT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">FADE_OUT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">GRAVITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">ROTATION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">SCALE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+</code></pre></div>
+<h3 id="particle_emitter_type">PARTICLE_EMITTER_TYPE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">POINT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">CUBE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">SPHERE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">RING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+</code></pre></div>
+<h3 id="data_type">DATA_TYPE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">BYTE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">SHORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">INTEGER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">FLOAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">STRING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">FILE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+</code></pre></div>
+<h3 id="message_icon">MESSAGE_ICON</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">OK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">MESSAGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">WARNING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">INFORMATION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+</code></pre></div>
+<h3 id="peer_state">PEER_STATE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">DISCONNECTED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">CONNECTING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">ACKNOWLEDGING_CONNECT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">CONNECTION_PENDING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">CONNECTION_SUCCEEDED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">CONNECTED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">DISCONNECT_LATER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+<span class="w">    </span><span class="nv">DISCONNECTING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span>
+<span class="w">    </span><span class="nv">ACKNOWLEDGING_DISCONNECT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span>
+<span class="w">    </span><span class="nv">ZOMBIE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span>
+</code></pre></div>
+<h3 id="sound_effect">SOUND_EFFECT</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">DISTORTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">ECHO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">REVERB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div>
+<h3 id="alignment_type">ALIGNMENT_TYPE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">LEFT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">RIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">CENTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div>
+<h3 id="anchor_type">ANCHOR_TYPE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">TOP_LEFT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">TOP_CENTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">TOP_RIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">CENTER_LEFT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">CENTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">CENTER_RIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">BOTTOM_LEFT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+<span class="w">    </span><span class="nv">BOTTOM_CENTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span>
+<span class="w">    </span><span class="nv">BOTTOM_RIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span>
+</code></pre></div>
+<h3 id="gui_alignment">GUI_ALIGNMENT</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">UPPER_LEFT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">LOWER_RIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">CENTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">SCALE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+</code></pre></div>
+<h3 id="trail_alignment_type">TRAIL_ALIGNMENT_TYPE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">CAMERA_X_AXIS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">CAMERA_Y_AXIS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">GLOBAL_X_AXIS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">GLOBAL_Y_AXIS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">GLOBAL_Z_AXIS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">PARENT_X_AXIS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">PARENT_Y_AXIS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+<span class="w">    </span><span class="nv">PARENT_Z_AXIS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span>
+</code></pre></div>
+<h3 id="key_code">KEY_CODE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">LBUTTON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">RBUTTON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">CANCEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">MBUTTON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">XBUTTON1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="nv">XBUTTON2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="nv">BACK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span>
+<span class="w">    </span><span class="nv">TAB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span>
+<span class="w">    </span><span class="nv">CLEAR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span>
+<span class="w">    </span><span class="nv">RETURN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span>
+<span class="w">    </span><span class="nv">SHIFT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span>
+<span class="w">    </span><span class="nv">CONTROL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span>
+<span class="w">    </span><span class="nv">MENU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span>
+<span class="w">    </span><span class="nv">PAUSE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span>
+<span class="w">    </span><span class="nv">CAPITAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span>
+<span class="w">    </span><span class="nv">KANA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span>
+<span class="w">    </span><span class="nv">HANGUEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span>
+<span class="w">    </span><span class="nv">HANGUL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span>
+<span class="w">    </span><span class="nv">JUNJA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">23</span>
+<span class="w">    </span><span class="nv">FINAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">24</span>
+<span class="w">    </span><span class="nv">HANJA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span>
+<span class="w">    </span><span class="nv">KANJI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span>
+<span class="w">    </span><span class="nv">ESCAPE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">27</span>
+<span class="w">    </span><span class="nv">CONVERT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">28</span>
+<span class="w">    </span><span class="nv">NONCONVERT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">29</span>
+<span class="w">    </span><span class="nv">ACCEPT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span>
+<span class="w">    </span><span class="nv">MODECHANGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">31</span>
+<span class="w">    </span><span class="nv">SPACE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span>
+<span class="w">    </span><span class="nv">PRIOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span>
+<span class="w">    </span><span class="nv">NEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">34</span>
+<span class="w">    </span><span class="nv">END</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">35</span>
+<span class="w">    </span><span class="nv">HOME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">36</span>
+<span class="w">    </span><span class="nv">LEFT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">37</span>
+<span class="w">    </span><span class="nv">UP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">38</span>
+<span class="w">    </span><span class="nv">RIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">39</span>
+<span class="w">    </span><span class="nv">DOWN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span>
+<span class="w">    </span><span class="nv">SELECT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">41</span>
+<span class="w">    </span><span class="nv">PRINT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span>
+<span class="w">    </span><span class="nv">EXECUT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">43</span>
+<span class="w">    </span><span class="nv">SNAPSHOT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">44</span>
+<span class="w">    </span><span class="nv">INSERT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">45</span>
+<span class="w">    </span><span class="nv">DELETE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">46</span>
+<span class="w">    </span><span class="nv">HELP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">47</span>
+<span class="w">    </span><span class="nv">KEY_0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">48</span>
+<span class="w">    </span><span class="nv">KEY_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">49</span>
+<span class="w">    </span><span class="nv">KEY_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span>
+<span class="w">    </span><span class="nv">KEY_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">51</span>
+<span class="w">    </span><span class="nv">KEY_4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">52</span>
+<span class="w">    </span><span class="nv">KEY_5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">53</span>
+<span class="w">    </span><span class="nv">KEY_6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">54</span>
+<span class="w">    </span><span class="nv">KEY_7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">55</span>
+<span class="w">    </span><span class="nv">KEY_8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">56</span>
+<span class="w">    </span><span class="nv">KEY_9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">57</span>
+<span class="w">    </span><span class="nv">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65</span>
+<span class="w">    </span><span class="nv">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">66</span>
+<span class="w">    </span><span class="nv">C</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">67</span>
+<span class="w">    </span><span class="nv">D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">68</span>
+<span class="w">    </span><span class="nv">E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">69</span>
+<span class="w">    </span><span class="nv">F</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">70</span>
+<span class="w">    </span><span class="nv">G</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">71</span>
+<span class="w">    </span><span class="nv">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">72</span>
+<span class="w">    </span><span class="nv">I</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">73</span>
+<span class="w">    </span><span class="nv">J</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">74</span>
+<span class="w">    </span><span class="nv">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span>
+<span class="w">    </span><span class="nv">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">76</span>
+<span class="w">    </span><span class="nv">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">77</span>
+<span class="w">    </span><span class="nv">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">78</span>
+<span class="w">    </span><span class="nv">O</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">79</span>
+<span class="w">    </span><span class="nv">P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">80</span>
+<span class="w">    </span><span class="nv">Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">81</span>
+<span class="w">    </span><span class="nv">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">82</span>
+<span class="w">    </span><span class="nv">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">83</span>
+<span class="w">    </span><span class="nv">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">84</span>
+<span class="w">    </span><span class="nv">U</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span>
+<span class="w">    </span><span class="nv">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">86</span>
+<span class="w">    </span><span class="nv">W</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">87</span>
+<span class="w">    </span><span class="nv">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">88</span>
+<span class="w">    </span><span class="nv">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">89</span>
+<span class="w">    </span><span class="nv">Z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">90</span>
+<span class="w">    </span><span class="nv">LWIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">91</span>
+<span class="w">    </span><span class="nv">RWIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">92</span>
+<span class="w">    </span><span class="nv">APPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">93</span>
+<span class="w">    </span><span class="nv">SLEEP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">95</span>
+<span class="w">    </span><span class="nv">NUMPAD0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">96</span>
+<span class="w">    </span><span class="nv">NUMPAD1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">97</span>
+<span class="w">    </span><span class="nv">NUMPAD2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">98</span>
+<span class="w">    </span><span class="nv">NUMPAD3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span>
+<span class="w">    </span><span class="nv">NUMPAD4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span>
+<span class="w">    </span><span class="nv">NUMPAD5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">101</span>
+<span class="w">    </span><span class="nv">NUMPAD6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">102</span>
+<span class="w">    </span><span class="nv">NUMPAD7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">103</span>
+<span class="w">    </span><span class="nv">NUMPAD8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">104</span>
+<span class="w">    </span><span class="nv">NUMPAD9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">105</span>
+<span class="w">    </span><span class="nv">MULTIPLY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">106</span>
+<span class="w">    </span><span class="nv">ADD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">107</span>
+<span class="w">    </span><span class="nv">SEPARATOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">108</span>
+<span class="w">    </span><span class="nv">SUBTRACT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">109</span>
+<span class="w">    </span><span class="nv">DECIMAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">110</span>
+<span class="w">    </span><span class="nv">DIVIDE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">111</span>
+<span class="w">    </span><span class="nv">F1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">112</span>
+<span class="w">    </span><span class="nv">F2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">113</span>
+<span class="w">    </span><span class="nv">F3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">114</span>
+<span class="w">    </span><span class="nv">F4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">115</span>
+<span class="w">    </span><span class="nv">F5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">116</span>
+<span class="w">    </span><span class="nv">F6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">117</span>
+<span class="w">    </span><span class="nv">F7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">118</span>
+<span class="w">    </span><span class="nv">F8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">119</span>
+<span class="w">    </span><span class="nv">F9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120</span>
+<span class="w">    </span><span class="nv">F10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">121</span>
+<span class="w">    </span><span class="nv">F11</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">122</span>
+<span class="w">    </span><span class="nv">F12</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span>
+<span class="w">    </span><span class="nv">NUMLOCK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">144</span>
+<span class="w">    </span><span class="nv">SCROLL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">145</span>
+<span class="w">    </span><span class="nv">LSHIFT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">160</span>
+<span class="w">    </span><span class="nv">RSHIFT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">161</span>
+<span class="w">    </span><span class="nv">LCONTROL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">162</span>
+<span class="w">    </span><span class="nv">RCONTROL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">163</span>
+<span class="w">    </span><span class="nv">LMENU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">164</span>
+<span class="w">    </span><span class="nv">RMENU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">165</span>
+<span class="w">    </span><span class="nv">OEM_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">186</span>
+<span class="w">    </span><span class="nv">PLUS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">187</span>
+<span class="w">    </span><span class="nv">COMMA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">188</span>
+<span class="w">    </span><span class="nv">MINUS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">189</span>
+<span class="w">    </span><span class="nv">PERIOD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">190</span>
+<span class="w">    </span><span class="nv">OEM_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">191</span>
+<span class="w">    </span><span class="nv">OEM_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">192</span>
+<span class="w">    </span><span class="nv">OEM_4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">219</span>
+<span class="w">    </span><span class="nv">OEM_5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">220</span>
+<span class="w">    </span><span class="nv">OEM_6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">221</span>
+<span class="w">    </span><span class="nv">OEM_7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">222</span>
+<span class="w">    </span><span class="nv">OEM_8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">223</span>
+<span class="w">    </span><span class="nv">OEM_AX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">225</span>
+<span class="w">    </span><span class="nv">OEM_102</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">226</span>
+<span class="w">    </span><span class="nv">ATTN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">246</span>
+<span class="w">    </span><span class="nv">CRSEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">247</span>
+<span class="w">    </span><span class="nv">EXSEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">248</span>
+<span class="w">    </span><span class="nv">EREOF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">249</span>
+<span class="w">    </span><span class="nv">PLAY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">250</span>
+<span class="w">    </span><span class="nv">ZOOM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">251</span>
+<span class="w">    </span><span class="nv">PA1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">252</span>
+<span class="w">    </span><span class="nv">OEM_CLEAR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">254</span>
+<span class="w">    </span><span class="nv">CODES_COUNT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span>
+</code></pre></div>
+<h3 id="mouse_code">MOUSE_CODE</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">LEFT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nv">RIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">MIDDLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>
