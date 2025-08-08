@@ -36,6 +36,7 @@
     | Lime.SetWriteConsole(bool `write`) |  | Writes console output to `output.txt` |
     | Lime.SetVSync(bool `enable`) ⚠️ |  | Enables/disables vertical sync (*Irrlicht cannot update v-sync at runtime, but a workaround may be explored in the future*) |
     | Lime.DisplayMessage(String `title`, String `message`, int `icon`) |  | Displays a Windows pop-up message; see [MESSAGE_ICON][message_icon] |
+    | Lime.GetCommandLine(String `command`) | String | Returns commandline value. If just the command exists with no value, it will return `true`. Example: `Lime.exe hello world` -> world, `Lime.exe -"hello world" hi` -> hi |
     | Lime.RecreateDevice() | | Applies any window changes such as a change in driver type and creates a new window (**Currently crashes**)
 
 [message_icon]: https://darttheg.github.io/LimeAPI/api/structs.html#message_icon
